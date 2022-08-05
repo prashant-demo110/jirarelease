@@ -21,4 +21,4 @@ jobs:
           LATEST_DATE: ${{ steps.latest_version.outputs.latest_tag_published_at }}
         run: |
           echo "Version $LATEST was released at $LATEST_DATE"
-	  echo '${{ steps.info.outputs.release_info }}'
+	  echo  ${{ steps.info.outputs.release_info }}
