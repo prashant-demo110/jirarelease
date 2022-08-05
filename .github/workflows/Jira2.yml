@@ -1,5 +1,5 @@
 on:
-#  push:
+  push:
     branches: [HP-2]
        
 name: get jira version tag
