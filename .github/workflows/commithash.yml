@@ -14,7 +14,7 @@ jobs:
     
     - name: Another step
       run: |
-        echo "Branch: ${{ steps.vars.outputs.branch }}"
-        echo "Sha: ${{ steps.vars.outputs.sha_short }}"
+        echo "Branch: branch- ${{ steps.vars.outputs.branch }}"
+        echo "Sha: dev- ${{ steps.vars.outputs.sha_short }}"
 
 
