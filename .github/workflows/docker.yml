@@ -17,10 +17,10 @@ jobs:
           echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
       
       - name: Fetch latest commit id
-        run: |
+     
           echo "dev-${{ steps.vars.outputs.sha_short }}"
       
-        name: Set up QEMU
+     
         uses: docker/setup-qemu-action@v2
       -
         name: Set up Docker Buildx
