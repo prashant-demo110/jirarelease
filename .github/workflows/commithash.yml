@@ -1,0 +1,18 @@
+name: get commit hash 
+on: push 
+jobs:   
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Declare some variables
+      id: vars
+      shell: bash
+      run: |
+        echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+    
+    - name: Fetch latest commit id
+      run: |
+        echo "dev-${{ steps.vars.outputs.sha_short }}"
+
+
