@@ -23,9 +23,10 @@ jobs:
       - name: Calling version data
         id:  latest_version
         run: |
-          curl -X POST -H "Authorization:${{secrets.JIRA_TOKEN}}" -H "Accept:application/vnd.github.v3+json" -o repos.json  https://api.github.com/repos/amitbind13/${{ github.event.inputs.repoName }}/pulls -d '{"title":"Releases","body":"Please pull these awesome changes in!","head":"amitbind13:${{ github.event.inputs.branchName}}","base":"main"}'
-          errorMessage="$(jq -r '.message' repos.json)"
-          errorDetail="$(jq -r '.errors[0].message' repos.json)"
+          curl --request POST \n
+          --url 'https://prashantb02.atlassian.net/projects/HP' \n
+          --user 'amitkumarbind130207@gmail.com:w9Qi8fSPDD1h76ELBfo9DF8E' \n
+          --header 'Accept: application/json'
 
 
         
