@@ -6,6 +6,6 @@ To get jira release through github actions
 7
 8
 123456
-123
+1234
 
 
