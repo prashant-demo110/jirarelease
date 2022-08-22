@@ -43,4 +43,4 @@ jobs:
           echo ::set-output name=Body::"$Body"
           echo ::set-output name=Released_date::"$Released_date"
           echo ::set-output name=Commit_branch_name::"$Commit_branch_name"
-          curl -D- -u uname:pass -X GET -d "Content-Type: application/json" https://prashantb02.atlassian.net/rest/api/3/project/HP/Release
+          curl -D- -u uname:pass -X GET -d "Content-Type: application/json" https://prashantb02.atlassian.net/rest/api/3/project/HP/Releases
