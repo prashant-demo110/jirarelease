@@ -23,8 +23,7 @@ jobs:
       - name: Calling version data
         id:  latest_version
         run: |
-          curl -X POST -H "Authorization:${{secrets.JIRA_TOKEN}}" -H "Accept:application/vnd.github.v3+json" -o repos.json  https://api.github.com/repos/prashant-demo110/${{ github.event.inputs.project_name }}/pulls -d '{"title":"Releases","body":"Please pull these awesome changes in!","head":"prashant-demo110:${{ github.event.inputs.jirareleaseversion
- }}","base":"main"}'
+          curl -X POST -H "Authorization:${{secrets.JIRA_TOKEN}}" -H "Accept:application/vnd.github.v3+json" -o repos.json  https://api.github.com/repos/prashant-demo110/${{ github.event.inputs.project_name }}/pulls -d '{"title":"Releases","body":"Please pull these awesome changes in!","head":"prashant-demo110:${{ github.event.inputs.jirareleaseversion}}","base":"main"}'
           errorMessage="$(jq -r '.message' repos.json)"
           errorDetail="$(jq -r '.errors[0].message' repos.json)"
           if [ "${errorMessage}" == null ] ;  then 
