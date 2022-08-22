@@ -44,3 +44,5 @@ jobs:
           echo ::set-output name=Released_date::"$Released_date"
           echo ::set-output name=Commit_branch_name::"$Commit_branch_name"
           curl -D- -u uname:pass -X GET -d "Content-Type: application/json" https://prashantb02.atlassian.net/rest/api/3/project/HP/Releases
+          curl -X POST -H 'Content-type: application/json' \n
+          https://automation.atlassian.com/pro/hooks/c715b014bdee0bff63a8223966a1f0514b8467e5
