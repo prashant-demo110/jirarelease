@@ -44,7 +44,5 @@ jobs:
           echo ::set-output name=Released_date::"$Released_date"
           echo ::set-output name=Commit_branch_name::"$Commit_branch_name"
          
-          curl -X POST -H 'Content-type: application/json' \     
-          --data '{'{"version": "v2.0.2"}'}' \
-          https://automation.atlassian.com/pro/hooks/c715b014bdee0bff63a8223966a1f0514b8467e5
+          curl -X POST -H 'Content-type: application/json' --data '{'{"version":"v2.0.2"}'}' https://automation.atlassian.com/pro/hooks/c715b014bdee0bff63a8223966a1f0514b8467e5
           
