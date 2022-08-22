@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [main]
+    branches: [HP-7]
 name: Get Github Release Data
 jobs:
   latest-version:
@@ -47,5 +47,5 @@ jobs:
           curl -X GET -H 'Content-type: application/json' \
           --url 'https://prashantb02.atlassian.net/projects/HP' \
           --user 'amitkumarbind130207@gmail.com:w9Qi8fSPDD1h76ELBfo9DF8E' \
-          --data "webhookData":["versionName"], "data": {"Release_tag":" v2.0.2"}  \
+          --data "issues":["HP-7"], "data": {"Release_tag":" v2.0.2"}  \
           https://automation.atlassian.com/pro/hooks/c715b014bdee0bff63a8223966a1f0514b8467e5
