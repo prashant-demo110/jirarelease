@@ -1,6 +1,6 @@
 on:
-  push:
-    branches: [HP-7]
+  release:
+    types: [published]
 name: Get Github Release Data
 jobs:
   latest-version:
