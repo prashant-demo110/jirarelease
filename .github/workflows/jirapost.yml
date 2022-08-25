@@ -48,5 +48,5 @@ jobs:
         
       - name: Send request to Jira
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"versionName":"${{ steps.releaseVersion.outputs.Release_tag }}"}' https://automation.atlassian.com/pro/hooks/c715b014bdee0bff63a8223966a1f0514b8467e5
+          curl -X POST -H 'Content-type: application/json' --data '{"versionName":"${{ steps.releaseVersion.outputs.Release_tag }}"}' https://automation.atlassian.com/pro/hooks/44ab25d4abf7e2a77f4c34e5538870c40b00554f
           
